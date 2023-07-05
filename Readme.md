@@ -2,6 +2,8 @@
 
 This repository contains code for preprocessing, training, evaluation, and inferencing of two models, SSD and Faster R-CNN, for the task of bird detection and classification. The main objective of this project is to detect the presence of birds in an input image, classify them into three species (European robin, Coal Tit, and Eurasian magpie), and localize the birds within the image. The models were trained using transfer learning from the TensorFlow model zoo and further refined using a dataset of 3000 bird pictures. The performance of both models was compared. Faster R-CNN outperformed SSD with an overall accuracy of 92% and higher mean average precision scores at both IOU thresholds (0.882 at IOU 0.50 and 0.765 at IOU 0.75).
 
+To facilitate interaction with the trained Faster R-CNN model, a Flask web application has been developed using the TFServing and MySQL. For more information about the Flask web application and its implementation, please follow [This Link](https://github.com/mariamkhmahran/bird-classifier-ui).
+
 ## Data Description
 
 The dataset used in this project consists of 3000 bird images, evenly divided into three classes corresponding to the three bird species. The images vary in size, but the majority have heights and widths of at least 600 pixels. The dataset includes images taken in daylight with birds in various positions and distances from the camera lens. Table I shows the number of images and tags (bounding boxes) per class after the data cleaning process.
